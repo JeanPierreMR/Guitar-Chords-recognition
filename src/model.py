@@ -13,13 +13,13 @@ from keras import backend as K
 from keras.models import model_from_json
 from keras.callbacks import Callback
 
-from settings import CLASSES_MAP, MODEL_JSON, MODEL_H5, CLASSES, \
+from ChordsExtractor.settings import CLASSES_MAP, MODEL_JSON, MODEL_H5, CLASSES, \
                                     MODEL_DIR, LOG_DIR_TRAINING
-from src.metrics import *
-from setup_logging import setup_logging
+from ChordsExtractor.src.metrics import *
+from ChordsExtractor.setup_logging import setup_logging
 
 setup_logging()
-logger = logging.getLogger('src.model')
+logger = logging.getLogger('ChordsExtractor.src.model')
 
 class LoggingCallback(Callback):
     """Callback that logs message at end of epoch.

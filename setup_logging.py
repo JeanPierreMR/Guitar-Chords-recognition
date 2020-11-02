@@ -3,7 +3,7 @@ import logging.config
 import yaml
 import time
 from logging import Formatter
-from settings import LOG_CONFIG
+from ChordsExtractor.settings import LOG_CONFIG
 
 def setup_logging():
     with open(LOG_CONFIG, 'r') as f:
